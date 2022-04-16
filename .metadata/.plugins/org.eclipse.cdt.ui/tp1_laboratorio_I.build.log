@@ -1,0 +1,30 @@
+14:56:37 **** Incremental Build of configuration Debug for project tp1_laboratorio_I ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ingresarDatos.o" "..\\src\\ingresarDatos.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\tp1_laboratorio_I.o" "..\\src\\tp1_laboratorio_I.c" 
+..\src\tp1_laboratorio_I.c: In function 'main':
+..\src\tp1_laboratorio_I.c:48:11: error: switch quantity not an integer
+    switch(opcion)
+           ^~~~~~
+..\src\tp1_laboratorio_I.c:53:14: warning: format '%f' expects argument of type 'double', but argument 2 has type 'float *' [-Wformat=]
+     printf("%f",&km);
+              ^
+..\src\tp1_laboratorio_I.c:61:126: warning: overflow in implicit constant conversion [-Woverflow]
+      precioAerol=ingresarFlotante(&precioAerol,"Ingrese el precio de Aerolineas: ", "Error. Ingrese un precio valido: \n",1, 9999999999, 3);
+                                                                                                                              ^~~~~~~~~~
+..\src\tp1_laboratorio_I.c:110:6: error: called object 'respuesta' is not a function or function pointer
+      respuesta(&debitoLatams, &debitoAeroli);
+      ^~~~~~~~~
+..\src\tp1_laboratorio_I.c:31:8: note: declared here
+  float respuesta;
+        ^~~~~~~~~
+..\src\tp1_laboratorio_I.c: In function 'respuesta':
+..\src\tp1_laboratorio_I.c:132:56: warning: format '%f' expects argument of type 'double', but argument 2 has type 'float *' [-Wformat=]
+  printf("El precio debito con descuento de Latam es %2.f\nEl precio debito con descuento de Aerolineas es %2.f\n", debitoLatams, debitoAeroli);
+                                                        ^
+..\src\tp1_laboratorio_I.c:132:110: warning: format '%f' expects argument of type 'double', but argument 3 has type 'float *' [-Wformat=]
+  printf("El precio debito con descuento de Latam es %2.f\nEl precio debito con descuento de Aerolineas es %2.f\n", debitoLatams, debitoAeroli);
+                                                                                                              ^
+
+14:56:38 Build Failed. 2 errors, 4 warnings. (took 932ms)
+

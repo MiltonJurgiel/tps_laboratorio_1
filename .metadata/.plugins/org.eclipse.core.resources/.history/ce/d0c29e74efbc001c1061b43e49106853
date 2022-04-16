@@ -1,0 +1,12 @@
+/*
+ * calcular.c
+ *
+ *  Created on: 15 abr. 2022
+ *      Author: milto
+ */
+#include <stdio.h>
+#include <stdlib.h>
+#include "ingresarDatos.h"
+
+
+

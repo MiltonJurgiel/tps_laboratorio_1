@@ -1,0 +1,18 @@
+/*
+ * FuncionesTP.h
+ *
+ *  Created on: 14 abr. 2022
+ *      Author: milto
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+#ifndef FUNCIONESTP_H_
+#define FUNCIONESTP_H_
+
+
+
+#endif /* FUNCIONESTP_H_ */

@@ -1,0 +1,29 @@
+/*
+ * calcular.c
+ *
+ *  Created on: 15 abr. 2022
+ *      Author: milto
+ */
+#include <stdio.h>
+#include <stdlib.h>
+#include "ingresarDatos.h"
+
+float debitoAmbas(float *precioAerol, float *precioLatam)
+{
+	float descuento = 0.1;
+	float descLatam;
+	float descAerol;
+	float debitoLatam;
+	float debitoAerol;
+
+	descLatam= descuento**precioLatam;
+	descAerol= descuento**precioAerol;
+	debitoLatam=*precioLatam-descLatam;
+	debitoAerol=*precioAerol-descAerol;
+
+	return printf("El precio debito con descuento de Latam es %2.f\nEl precio debito con descuento es %2.f", debitoLatam, debitoAerol);
+
+}
+
+
+

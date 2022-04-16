@@ -1,0 +1,23 @@
+/*
+ * calcular.h
+ *
+ *  Created on: 15 abr. 2022
+ *      Author: milto
+ */
+
+#ifndef CALCULAR_H_
+#define CALCULAR_H_
+
+float debitoAmbas(float *precioLatam, float *precioAerol);
+
+float creditoAmbas(float *precioLatam, float *precioAerol);
+
+float btcAmbas(double *precioLatam, double *precioAerol);
+
+
+
+
+
+
+
+#endif /* CALCULAR_H_ */

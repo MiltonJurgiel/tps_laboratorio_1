@@ -1,0 +1,34 @@
+/*
+ ============================================================================
+ Name        : tp1_laboratorio_I.c
+ Author      : Milton Jurgiel
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void ingresarOpcion (void);
+
+int main(void)
+{
+	setbuf(stdout, NULL);
+	int opcion;
+	int km;
+
+	ingresarOpcion();
+
+
+
+
+
+	return EXIT_SUCCESS;
+}
+
+void ingresarOpcion (void)
+{
+	printf("Ingrese una opcion: ");
+}

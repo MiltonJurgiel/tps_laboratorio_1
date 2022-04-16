@@ -1,0 +1,108 @@
+/*
+ ============================================================================
+ Name        : tp1_laboratorio_I.c
+ Author      : Milton Jurgiel
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "ingresarDatos.h"
+
+float debitoAmbas(int *precioLatam, int *precioAerol);
+
+int main(void)
+{
+	setbuf(stdout, NULL);
+	int opcion;
+	float km;
+	int flag1=0;
+	int flag2=0;
+	int precioLatam;
+	int precioAerol;
+
+	do
+	{
+		printf("1. Ingresar kilometros: (km=x)\n\n"
+				"2. Ingresar precio de Vuelos: (Aerolineas=y, Latam=z): \n-Precio vuelo Aerolineas: \n-Precio vuelo Latam:  \n\n"
+				"3. Calcular todos los costos:\na) Tarjeta de debito (descuento 10%)\nb) Tarjeta de credito (interes 25%)\nc) Bitcoin (1BTC-> 4606954.55 Pesos Argentinos)\nd) Mostrar precio por km (precio unitario)\ne) Mostrar diferencia de precio ingresada (Latam-Aerolineas)\n\n"
+				"4. Informar resultados\nLatam:\na) Precio con tarjeta de debito: r\nb) Precio con tarjeta de credito: r\nc)Precio pagando con bitcoin: r\nd) Precio unitario: \nAerolineas:\na) Precio con tarjeta de debito: r\nb) Precio con tarjeta de credito: r\nc)Precio pagando con bitcoin: r\nd) Precio unitario: r\nLa diferencia de precio es: r\n\n"
+				"5. Carga forzada de datos\n\n"
+				"6. Salir\n\n");
+		opcion=ingresarOpcion();
+
+
+		switch(opcion)
+		{
+		case 1:
+			printf("%f", km);
+			flag1=1;
+			km=ingresarFlotante("Ingrese la cantidad de kilometros: ", "error. Ingrese un kilometraje valido.\n");
+			system("PAUSE");
+			system("cls");
+
+		break;
+		case 2:
+			if(flag1==1)
+			{
+				precioAerol=ingresarFlotante("Ingrese el precio de Aerolineas: ", "Error. Ingrese un precio valido: \n");
+				precioLatam=ingresarFlotante("Ingrese el precio de Latam: ", "Error. Ingrese un precio valido: \n");
+			}
+			else
+			{
+				printf("Error. Los kilometros no fueron ingresados. Vuelva a la opcion 1, por favor./n");
+			}
+			flag2=1;
+			system("PAUSE");
+			system("cls");
+		break;
+		case 3:
+			if(flag2==1)
+			{
+
+			}
+
+
+
+		break;
+		case 4:
+
+
+
+
+		break;
+		default:
+
+
+		break;
+
+
+		}
+
+	}while(opcion!=6);
+
+
+	return EXIT_SUCCESS;
+}
+
+float debitoAmbas(int *precioLatam, int *precioAerol)
+{
+	float descuento = 0.1;
+	float descLatam;
+	float descAerol;
+	float debitoLatam;
+	float debitoAerol;
+
+	descLatam= descuento**precioLatam;
+	descAerol= descuento**precioAerol;
+	debitoLatam=*precioLatam-descLatam;
+	debitoAerol=*precioAerol-descAerol;
+
+	return printf("El precio con debito de Latam es %2.f\n"
+			"El precio con debito de Aerolineas es %2.f\n", debitoLatam, debitoAerol);
+
+
+}

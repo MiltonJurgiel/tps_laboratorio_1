@@ -1,0 +1,15 @@
+/*
+ * ingresarDatos.h
+ *
+ *  Created on: 15 abr. 2022
+ *      Author: milto
+ */
+
+#ifndef INGRESARDATOS_H_
+#define INGRESARDATOS_H_
+
+int ingresarOpcion ();
+
+int ingresarFlotante(float *input,float mensaje,char errorMensaje,float minimo,float maximo,int reintentos);
+
+#endif /* INGRESARDATOS_H_ */
